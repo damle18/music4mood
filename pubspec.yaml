@@ -48,8 +48,9 @@ dev_dependencies:
   flutter_launcher_icons: ^0.9.2
 
 flutter_icons:
- android: true 
- image_path: "images/logo1.png"
+ android: true
+ ios: true
+ image_path: "images/Inkedlogo1_LI.jpg"
 
 flutter_native_splash:
   color: "#000000"
