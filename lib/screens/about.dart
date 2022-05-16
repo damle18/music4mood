@@ -1,8 +1,6 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:music4mood/utils/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 
 class Developer {
   final String name;
@@ -57,7 +55,6 @@ const developerList = [
       emailUrl: "",
       instagramUrl: "https://www.instagram.com",
       color: Colors.transparent),
-
 ];
 
 class Developers extends StatefulWidget {
@@ -76,7 +73,7 @@ class _DevelopersState extends State<Developers> {
 
   @override
   void initState() {
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _pageController.addListener(_listener);
     });
     super.initState();
@@ -280,9 +277,7 @@ class _DevelopersState extends State<Developers> {
                                         height: 7,
                                       ),
                                       IconButton(
-                                        onPressed: () {
-                                          
-                                        },
+                                        onPressed: () {},
                                         icon: Image.asset(
                                           "images/gmail.png",
                                           height: 50,
@@ -313,6 +308,4 @@ class _DevelopersState extends State<Developers> {
   _launchURL(String url) {
     launch(url);
   }
-
-  
 }
