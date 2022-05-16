@@ -1,4 +1,3 @@
-
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
@@ -11,35 +10,38 @@ List<CameraDescription>? cameras;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  cameras=await availableCameras();
+  cameras = await availableCameras();
   runApp(trialApp());
 }
 
 class trialApp extends StatefulWidget {
-  const trialApp({ Key? key }) : super(key: key);
+  const trialApp({Key? key}) : super(key: key);
 
   @override
   _trialAppState createState() => _trialAppState();
 }
 
 class _trialAppState extends State<trialApp> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme:ThemeData(canvasColor:Colors.grey[900],primaryColor:Colors.greenAccent[100],
-      shadowColor:Colors.black45,backgroundColor:Colors.grey[900],
-      appBarTheme:AppBarTheme(backgroundColor:Colors.grey[850],
-      titleTextStyle:TextStyle(color:Colors.white,shadows:const [Shadow(color:Colors.black87)],
-      fontFamily:'Hersheys',fontSize:36.0,letterSpacing:3.0),),
-      
+      title: "music4mood",
+      theme: ThemeData(
+        canvasColor: Colors.grey[900],
+        primaryColor: Colors.greenAccent[100],
+        shadowColor: Colors.black45,
+        backgroundColor: Colors.grey[900],
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.grey[850],
+          titleTextStyle: TextStyle(
+              color: Colors.white,
+              shadows: const [Shadow(color: Colors.black87)],
+              fontFamily: 'Hersheys',
+              fontSize: 36.0,
+              letterSpacing: 3.0),
+        ),
       ),
-      
-      
-      
-      home:Home(),
-      
-    
+      home: Home(),
     );
   }
 }
